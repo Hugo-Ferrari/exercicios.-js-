@@ -79,16 +79,20 @@ function exe1(){
 function exe2(){
     let preco = 5.0
     let quant = 120 
-    let lucro 
     let despesa =200
+    let lucro, MaiorLucro = 0
     let aux =""
     while(preco>= 1.0){
         lucro = (preco* quant)- despesa
-        aux= aux + "\n"+ ( $(preco) - $(quant) - $(despesa) - $(lucro))
+        if(lucro > MaiorLucro){
+            MaiorLucro = lucro
+        }
+        aux= aux + "\n"+ ( `${preco} - ${quant} - ${despesa} - ${lucro}`)
         quant =quant +25
         preco = preco - 0.5
     }
     alert( aux)
+    alert(MaiorLucro )
 }
 
 
