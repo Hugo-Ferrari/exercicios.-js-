@@ -41,7 +41,7 @@ function pesquisaSatisfacao(){
     let media = soma / 10
     alert(`A média é ${media.toFixed(1)}`)
 }
-
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 function exe1(){
     let a,b,c,d, i, aux    // aux = auxiliar 
@@ -75,6 +75,7 @@ function exe1(){
 
     grupo++
     }
+    //--------------------------------------------------------------------------------------------------------------------------------------------------------
 }
 function exe2(){
     let preco = 5.0
@@ -82,6 +83,7 @@ function exe2(){
     let despesa =200
     let lucro, MaiorLucro = 0
     let aux =""
+
     while(preco>= 1.0){
         lucro = (preco* quant)- despesa
         if(lucro > MaiorLucro){
@@ -94,30 +96,7 @@ function exe2(){
     alert( aux)
     alert(MaiorLucro )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//------------------------------------------------------------------------------------------------------------------------------
 function exe3(){
     let conta, idade, soma, porcentagem 
 
@@ -157,4 +136,38 @@ function exe3(){
     alert("porcentagem relação F1:", porcentagem , "%");
     porcentagem = (f5/ soma)* 100;
     alert( "porcentagem relação F5: ", porcentagem, "%")
+}
+
+function exe4(){
+    let num=0
+    let tab=0 
+    
+
+    alert("escreva um numero para ser feito a tabuada");
+    num= parseInt(window.prompt("digite um número")) 
+    for(let i=0; i<=10; i++){
+        tab= num*i
+        
+        console.log(`${num} X ${i} = ${tab}`)
+    }
+}
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+function exe5(){
+    
+    let tab = 0
+
+    for(let num =0; num<=10; num++){
+        for(let i= 0; i<=10; i++){
+            
+             tab= num*  i 
+            
+             console.log(`${num} X ${i} = ${tab}`)
+            }
+        console.log(`\n`)  
+    }
+}
+//--------------------------------------------------------------------------------------------------------------------------------------------------
+
+function exe6(){
+    
 }
