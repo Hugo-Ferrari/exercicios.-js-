@@ -190,9 +190,9 @@ function exe6(){
     }
 }
     total= valorP+valorV
-    alert(`O valor total das compras à vista foi de: R$ ${valorV.toFixed(2)}`);
-alert(`O valor total de compras a prazo foi de: R$ ${valorP.toFixed(2)}`);
-alert(`O total das compras efetuadas foi de: R$ ${total.toFixed(2)}`);
+    alert(`O valor total das compras à vista foi de: R$ ${valorV}`);
+alert(`O valor total de compras a prazo foi de: R$ ${valorP}`);
+alert(`O total das compras efetuadas foi de: R$ ${total}`);
 
 
 
