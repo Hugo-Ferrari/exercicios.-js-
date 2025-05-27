@@ -169,5 +169,32 @@ function exe5(){
 //--------------------------------------------------------------------------------------------------------------------------------------------------
 
 function exe6(){
-    
+    let total=0,i
+    let valorV =0, valorP =0 
+
+    for(i=0; i<15; i++){
+    let codigo = window.prompt("digite sua forma de pagamento (v para avista e p para prazo) ");
+    let valor = parseFloat(window.prompt("digite o valor da compra"));
+    if(codigo == "v"){
+        valorV= valor+ valorV
+        
+
+    }
+    else if(codigo == "p"){
+        valorP = valor+ valorP
+        
+    }
+    else{
+        alert("codigo invalido, por favor tente de novo!!")
+        i--;
+    }
+}
+    total= valorP+valorV
+    alert(`O valor total das compras à vista foi de: R$ ${valorV.toFixed(2)}`);
+alert(`O valor total de compras a prazo foi de: R$ ${valorP.toFixed(2)}`);
+alert(`O total das compras efetuadas foi de: R$ ${total.toFixed(2)}`);
+
+
+
+
 }
