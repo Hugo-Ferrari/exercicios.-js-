@@ -195,6 +195,39 @@ alert(`O valor total de compras a prazo foi de: R$ ${valorP}`);
 alert(`O total das compras efetuadas foi de: R$ ${total}`);
 
 
+}
 
+function exe7(){
+    let idade50=0, altura10e15=0, quantA=0, peso40=0, porcentagem,media, i
 
+     
+
+    for(i=0;i<5;i++){
+        let idade = parseInt(window.prompt("digite a sua idade"));
+        let peso = parseInt(window.prompt("digite o seu peso"))
+        let altura = parseInt( window.prompt("digite a sua altura "))
+
+        if(idade>50){
+            idade50++
+        }
+        if(idade<20 && idade>10){
+            altura10e15= altura10e15+altura 
+            quantA++
+        }
+        if(peso<=40){
+            peso40++
+        }
+    }
+    if (quantA > 0) {
+    media = altura10e15 / quantA;
+    } 
+    else {
+    media = 0;
+    }
+    media= altura10e15/quantA
+    porcentagem = (peso40/i)*100
+    
+    alert(`a qauntidade de pessoas com idade superior a 50 é de: ${idade50}`);
+    alert(`a media das alturas de pessoas entre 10 e 20 anos é de: ${media}`);
+    alert(`a porcentagem de pessoas com peso menor que 40 kg é de ${porcentagem} %`);
 }
