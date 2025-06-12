@@ -98,7 +98,7 @@ function exe2(){
 }
 //------------------------------------------------------------------------------------------------------------------------------
 function exe3(){
-    let conta, idade, soma, porcentagem 
+    let conta, soma, porcentagem 
 
     let f1=0 
     let f2=0
@@ -198,11 +198,11 @@ alert(`O total das compras efetuadas foi de: R$ ${total}`);
 }
 
 function exe7(){
-    let idade50=0, altura10e15=0, quantA=0, peso40=0, porcentagem,media, i
+    let idade50=0, altura10e15=0, quantA=0, peso40=0, porcentagem,media
 
      
 
-    for(i=0;i<5;i++){
+    for( let i =0;i<5;i++){
         let idade = parseInt(window.prompt("digite a sua idade"));
         let peso = parseInt(window.prompt("digite o seu peso"))
         let altura = parseInt( window.prompt("digite a sua altura "))
@@ -230,4 +230,183 @@ function exe7(){
     alert(`a qauntidade de pessoas com idade superior a 50 é de: ${idade50}`);
     alert(`a media das alturas de pessoas entre 10 e 20 anos é de: ${media}`);
     alert(`a porcentagem de pessoas com peso menor que 40 kg é de ${porcentagem} %`);
+}
+
+
+
+function exe8(){
+    let idade, peso, altura, olhos, cabelo
+    let item1 =0
+    let item2 =0 
+    let item2qtt = 0 
+    let item3 =0 
+    let item4 =0 
+
+    for(let conta = 1; conta <= 6; conta++){ //o " do " " while ", garante que o codigo seja executado ao menos uma vez
+        do{
+            idade = Number(prompt("informe idade >0"))
+        }
+        while(idade<0)
+
+            do{
+        peso = Number(prompt("informe peso > 0 "))
+        }
+        while(peso<0)
+
+            do{
+        altura = Number(prompt("informe a sua altura"))
+        }
+        while(altura<0)
+
+            do{
+        olhos = prompt("infome a cor de seus olhos A-azul P-preto V-verde C-castanho ").toUpperCase()
+        }
+        while(olhos != 'A' && olhos != 'P' && olhos != "V" && olhos != "C")
+
+            do{
+        cabelo = prompt("infome a cor do cabelo P-preto C-castanho L-louro R-ruivo ").toUpperCase()
+        }
+        while(cabelo != 'A' && cabelo != 'C' && cabelo != 'L' && cabelo!= 'R')
+        
+        if(idade >50 && peso < 60 ){
+            item1++
+        }
+        if( altura <11.50){
+            item2= item2+ idade 
+            item2qtt
+        }
+        if( olhos == 'A'){
+            item3++
+        }
+        if(cabelo == 'R' && olhos != 'A'){
+            item4 
+        }
+
+            
+    }
+    alert(`item 1 ${item1} \n  item 2 ${item2/ item2qtt} \nitem 3 ${item3/6*100} \nitem 4 ${item4}`)
+
+}
+
+function exe9(){
+    let  peso90, idade10, porcentagem, idade1
+
+    for(let i=0;i<10; i++){
+        let idade = parseInt(window.prompt("digite a sua idade "));
+        let altura = parseInt(window.prompt("digite a sua altura "))
+        let peso = parseInt(window.prompt("digite o seu peso "))
+
+       idade1= idade+ idade1;
+       if(peso > 90 && altura< 1.50){
+        peso90++ 
+       }
+       if(idade > 10 && idade < 30 && altura >1.90)
+        idade10++
+    }
+
+
+    porcentagem= (idade10/ i) * 100 
+    alert(`a media da idade das pessoas é de ${idade1/10}`)
+    alert(`a quantidade de pessoas com altura superior a 90 e menor que 1,50 e de: ${peso90}`)
+    alert(` a porcentagem de pessoas com idade entre 10 e 30 e medem mais de 1,90 é de ${porcentagem}`)
+}
+
+
+function exe10(){
+    let  pares =0, primos =0
+
+    for(let i =1; i<= 10; i++){
+        let numero= parseInt(window.prompt("digite 10 numeros"))
+        if( numero%2==0){
+            pares = pares + numero
+        }
+        //não consegui fazer os numeros primos 
+       if(numero >= 1 && numero %i != 0 ){
+            primos = primos+ numero
+        }
+       
+    }
+     alert(`a soma das numeros pares é: ${pares}`)
+     alert(`a soma dos numeros primos é de ${primos }`)
+}
+
+
+// exercicios de vetor 
+
+function vetor1(){
+    let = vet=[] //declaração do vetor 
+    let pares =[]
+    let impares =[]
+
+
+    // o primeiro for é ultiizado para a entrada de dados 
+    for( let i=0; i<6; i++){
+        vet.push(Number(prompt(`informe o ${i+1} elemento `)))
+    }
+    // segundo "for" é usado para colocar os "if" e "else"
+
+
+    //encontrar para e impares e colocar em 2 vetores 
+    for( let i=0;i<6  ; i++){
+        if( vet[i] %2 ==0){
+            pares.push(vet[i])   // push é para ser inserido um elemento no vetor (especifico para vetores) 
+        }
+        else{
+            impares.push(vet[i])
+        }
+    }
+
+    alert(`quantidade de pares ${pares.length} - ${pares}`)   // length retorna o tamanho do vetor, quantos elementos ele tem;( especificos para vetores para vetores)
+    alert (`quantidade de impares ${impares.length} - ${impares }`)
+}
+
+function vetor2(){
+    let vet=[]
+    
+
+    for(let i=0; i<10; i++){
+        vet.push(Number(prompt(`informe o ${i+1} elemento `)))
+    }
+
+    for(let i=0; i<10; i++){
+        if( i %2 == 0){ // verifica se a posição é par 
+            vet[i]= vet[i]+10
+        }
+        else{ 
+            vet[i] = vet[i]*3
+        }
+    }
+    alert(`Novo Vetor Alterado ${vet}`)
+}
+
+function vetor3(){
+    let vet = []
+    let g = 0
+    let gm =0
+    let ng = 0
+    let porcentagem 
+
+    for(let i =0; i<10 ; i++){
+        do{
+        vet[i] = (Number(prompt(` informe sua respotas 1-gostou muito, 2- gostou, 3-não gostou `)))
+        }
+        while(vet[i] != 1 && vet[i]!= 2 &&  vet[i] != 3)
+    }
+    for(let i =0; i<10 ;i++){
+        if(vet[i]== 1){
+            gm++
+        }
+        if( vet[i] ==2 ){
+            g++
+        }
+        if(vet [i]== 3){
+            ng++
+        }
+    }
+    
+    alert(`quantidade que gostaram muito ${gm}`)
+    alert(`quantidade que gostaram  ${g}`)
+    alert(`quantidade que não gostaram ${ng}`)
+    alert(` a porcentagem de pessoas que nn gostaram foi de ${ ng/10*100} %`)
+
 }
